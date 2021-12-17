@@ -1,0 +1,44 @@
+.customer_profile {
+  .page__buttons {
+    justify-content: flex-end;
+  }
+
+  .page__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .customer_info,
+  .customer_history,
+  .balance_form {
+    flex: 1;
+  }
+
+  .balance_form {
+    .form__input {
+      flex-basis: 100% !important;
+    }
+  }
+
+  .customer_history {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    button {
+      align-self: flex-start;
+    }
+  }
+
+  .row {
+    font-size: $font-size-normal;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    span {
+      flex: 1;
+    }
+  }
+}

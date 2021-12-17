@@ -1,0 +1,76 @@
+.reports {
+  .page__section {
+    padding: 3rem;
+    background-color: $color-white;
+    border-radius: 4px;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.salesSummaryTable__main {
+  overflow: auto;
+  table {
+    width: 1600px;
+  }
+
+  .pagination {
+    margin-top: 2rem;
+  }
+}
+.inventory-dump {
+  justify-content: flex-end;
+}
+
+.sales_summary {
+  .info_row {
+    @include mobile {
+      flex-direction: column !important;
+    }
+  }
+}
+
+.categories {
+  max-height: 50rem;
+  overflow: auto;
+  max-width: 30rem;
+  &_report {
+    --space-y-reverse: 0;
+    margin-top: calc(1rem * var(--space-y-reverse));
+    margin-bottom: calc(1rem * calc(1 - var(--space-y-reverse)));
+    position: relative;
+  }
+  &_checkboxParent {
+    position: absolute !important;
+  }
+  &_parentContainer {
+    position: relative;
+  }
+  &_noData {
+    text-align: center;
+    margin-top: 10rem;
+  }
+}
+
+.renderer {
+  position: absolute !important;
+  right: 52px !important;
+  top: 7px;
+}
+
+.fetchCategories_Container {
+  // display: grid;
+  // grid-template-columns: repeat(12, minmax(0, 1fr));
+  // h2 {
+  //   grid-column: span 11 / span 11;
+  // }
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+
+  // Button {
+  //   max-width: 16rem;
+  // }
+}

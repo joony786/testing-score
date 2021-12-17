@@ -1,0 +1,65 @@
+.switch_outlet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  @include mobile {
+    display: none;
+  }
+
+  &__button {
+    font-size: $font-size-normal;
+    color: $color-blue;
+  }
+}
+
+// Mobile
+.mobile_outlets {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+    margin: 1rem 0;
+  }
+
+  .button__back {
+    font-size: 1.2rem;
+    color: $color-grey;
+
+    svg {
+      path {
+        fill: $color-grey;
+      }
+    }
+  }
+
+  .switch_outlet_mobile {
+    z-index: 20;
+  }
+
+  .mobile_outlets_custom_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 2rem;
+    gap: 2rem;
+
+    &__button {
+      font-size: $font-size-normal;
+      color: $color-blue;
+    }
+  }
+}
+
+.switch_selection_mobile_content_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 2rem;
+  gap: 2rem;
+  font-size: $font-size-normal;
+  color: $color-blue;
+}

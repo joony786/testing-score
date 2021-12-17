@@ -1,0 +1,27 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Installing node packages
+      - n 14.15.5
+      - rm -rf node_modules
+      - yarn cache clean
+      - yarn install
+  build:
+    commands:
+      - echo Build started on `date`
+      - export REACT_APP_API_BASE_URL=$REACT_APP_API_BASE_URL
+
+      - yarn version
+      - yarn run build
+      - export API_BASE_URL=$API_BASE_URL
+      - export FABRIC_INTEGRATION_BASE_URL=$FABRIC_INTEGRATION_BASE_URL
+      - export IMAGE_UPLOADS_URL=$IMAGE_UPLOADS_URL
+      - export ORDER_SERVICE_URL=$ORDER_SERVICE_URL
+      - export REPORTS_SERVICE_URL=$REPORTS_SERVICE_URL
+      - export WMS_BASE_URL=$WMS_BASE_URL
+      - yarn version
+      - yarn run build
+  post_build:
+    commands:
+      - aws s3 sync build/ s3://$BUCKET_NAME

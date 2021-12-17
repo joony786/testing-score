@@ -1,0 +1,110 @@
+.button {
+  &__back {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color-black;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 1.2rem;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+
+  &__white {
+    color: $color-black !important;
+    background-color: $color-white !important;
+    border-color: $color-black !important;
+
+    &:hover {
+      color: $color-white !important;
+      background-color: $color-grey !important;
+      border-color: $color-grey !important;
+    }
+  }
+}
+
+.button_upload {
+  border: 1px solid $color-black;
+  border-radius: 1.6rem;
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  cursor: pointer;
+  font-size: $font-size-small;
+
+  input[type="file"] {
+    display: none;
+  }
+}
+
+.delete-confirm-button {
+  background: #ff4d4f !important;
+  border-color: #ff4d4f !important;
+}
+
+.products-bulk-delete-btn {
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.file-remove-div {
+  display: inline-flex;
+  margin-left: 10px;
+}
+
+.mt-2 {
+  margin-top: 2px;
+}
+
+.file-remove-btn {
+  cursor: pointer;
+}
+
+.button-disabled {
+  pointer-events: none;
+  color: #b9bfc7;
+}
+
+.products-inventory-count {
+  width: 20px;
+  height: 30px;
+  background-color: #0d62ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 2rem;
+}
+
+.backBtnCustom {
+  &__back {
+    color: $color-black;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 1.2rem;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include mobile {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

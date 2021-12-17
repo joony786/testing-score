@@ -1,0 +1,53 @@
+.roles {
+  .form__input {
+    padding: 2rem;
+    border: 1px solid $color-grey;
+    align-self: normal;
+    flex-basis: 48% !important;
+  }
+  .heading {
+    margin-bottom: 1rem;
+  }
+
+  .checkbox_list {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      padding-left: 0;
+
+      span {
+        font-size: 13px;
+      }
+    }
+
+    .units {
+      display: flex;
+      gap: 3rem;
+      padding: 9px 0;
+    }
+
+    .radio_btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .sellable_switch {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 9px 0;
+
+      span {
+        font-size: 1.3rem;
+      }
+    }
+
+    .decimal_select {
+      padding: 9px 0;
+    }
+  }
+}

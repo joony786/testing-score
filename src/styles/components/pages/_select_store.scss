@@ -1,0 +1,49 @@
+.select_store {
+  .outlet__select {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    .outlet__link {
+      width: 22%;
+      border: 1px solid #454f5b;
+      font-size: 14px;
+      padding: 2.8rem 0;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-transform: capitalize;
+
+      &:hover {
+        background-color: $color-blue;
+        color: $color-white;
+        transform: scale(0.9);
+        border-color: $color-blue;
+      }
+
+      @include xs {
+        width: 100%;
+      }
+
+      @include tablet {
+        width: 47% !important;
+      }
+    }
+
+    .outlet__active {
+      color: $color-white;
+      background-color: $color-blue;
+      border-color: $color-blue;
+    }
+
+    .brand__active {
+      color: $color-white;
+      background-color: $color-blue;
+      border-color: $color-blue;
+    }
+
+
+  }
+}

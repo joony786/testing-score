@@ -1,0 +1,41 @@
+.table__history {
+  width: 100%;
+
+  th,
+  td {
+    font-size: $font-size-small;
+    text-align: left;
+    padding: 2.5rem 1rem;
+  }
+
+  th {
+    color: $color-grey;
+  }
+
+  table {
+    font-size: $font-size-small;
+  }
+
+  .heading {
+    background-color: $main-bg;
+    padding-left: 1rem;
+  }
+}
+
+// Responsive Tables
+.category .page__table table {
+  min-width: auto;
+}
+
+.table__actionhistory__main {
+  overflow: auto;
+
+  table {
+    width: 1200px !important;
+  }
+}
+
+.results {
+  font-size: 14px;
+  line-height: 16px;
+}

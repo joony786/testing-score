@@ -1,0 +1,78 @@
+.dashboard {
+  .section__sales {
+    background-color: $color-white;
+    padding: 2.5rem;
+    border-radius: 4px;
+    overflow: auto;
+
+    .heading {
+      margin-bottom: 4rem;
+    }
+
+    &_content {
+      @include mobile {
+        min-width: 80rem;
+      }
+    }
+  }
+
+  .section__stats {
+    display: flex;
+    gap: 1.1rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+
+    .box {
+      line-break: anywhere;
+
+      @include tablet {
+        flex: 0 0 49%;
+      }
+
+      @include desktop {
+        flex: 0 0 32%;
+      }
+
+      @include xl {
+        flex: 0 0 20%;
+      }
+    }
+    //  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+
+  .section__graph {
+    background-color: $color-white;
+    padding: 2.5rem;
+    gap: 4rem;
+    border-radius: 4px;
+    overflow: auto;
+
+    &_content {
+      display: flex;
+
+      @include mobile {
+        min-width: 80rem;
+      }
+    }
+
+    .heading {
+      margin-bottom: 4rem;
+    }
+
+    .history {
+      flex: 1;
+    }
+
+    .most_sold {
+      flex: 2;
+    }
+  }
+}

@@ -1,0 +1,156 @@
+.page {
+  &__top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    transform: translateY(-2rem);
+
+    @include mobile {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      gap: 2rem;
+      transform: translateY(-2rem);
+      display: none;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__search {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 2rem;
+
+    @include xxs {
+      flex-direction: column;
+
+      button {
+        align-self: flex-end;
+      }
+    }
+
+    @include mobile {
+      gap: 1rem;
+    }
+
+    @include desktop {
+      max-width: 80rem;
+    }
+  }
+
+  &__body {
+    padding: 3.5rem 3rem;
+    background-color: $color-white;
+
+    .header-button-float {
+      justify-content: flex-end;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  &__tabs {
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+
+    .tabs_row + div {
+      overflow: auto !important;
+    }
+
+    .Tabstyles__TabNavigation-sc-1m1qmka-2 {
+      overflow: auto;
+      padding-bottom: 2rem;
+    }
+
+    .tabitem-space {
+      white-space: nowrap;
+    }
+
+    table {
+      margin-top: 6rem;
+    }
+  }
+
+  &__info_box {
+    display: flex;
+    gap: 3.7rem;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__table {
+    // margin-top: 6rem;
+    padding-top: 6rem;
+
+    @include mobile {
+      overflow: auto;
+    }
+
+    table {
+      @include mobile {
+        min-width: 80rem;
+      }
+    }
+
+    &.t-100 {
+      table {
+        @include mobile {
+          min-width: 100rem;
+        }
+      }
+    }
+
+    &.t-130 {
+      table {
+        @include mobile {
+          min-width: 130rem;
+        }
+      }
+    }
+
+    &.t-big {
+      overflow: auto;
+
+      @include custom-scroll-horizontol;
+
+      table {
+        min-width: 120rem;
+      }
+    }
+    &.t-summary {
+      overflow: auto;
+
+      @include custom-scroll-horizontol;
+
+      table {
+        min-width: 160rem;
+      }
+    }
+    &.t-reports {
+      overflow: auto;
+      padding-bottom: 2rem;
+      @include custom-scroll-horizontol;
+      table {
+        min-width: 100rem;
+      }
+    }
+  }
+}

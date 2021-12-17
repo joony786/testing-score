@@ -1,0 +1,108 @@
+body {
+  background-color: $main-bg;
+}
+
+.demo_header {
+  @include mobile {
+    padding: 0 1rem !important;
+  }
+}
+
+// header .profile.bottom {
+//   z-index: 9999;
+// }
+
+.container {
+  display: flex;
+  padding: 4rem;
+
+  @include desktop {
+    padding-bottom: 0;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+  }
+}
+
+.main {
+  width: 100%;
+  padding: 2rem;
+
+  @include custom-scroll-hidden;
+
+  @include mobile {
+    padding: 2rem 0;
+  }
+
+  @include desktop {
+    height: calc(100vh - 12rem);
+    overflow: auto;
+  }
+}
+
+.page {
+  &__buttons {
+    margin-bottom: 2rem;
+  }
+
+  &__search {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.app-alert-container {
+  margin: 0 auto;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8rem;
+  display: none;
+
+  .alert-content {
+    font-size: 1.3rem !important;
+    width: fit-content !important;
+    min-height: 50px;
+
+    @include mobile {
+      width: 300px !important;
+    }
+
+    // .dismiss {
+    //   background-color: $color-white;
+    // }
+  }
+}
+
+.react-datepicker-popper {
+  z-index: 100 !important;
+}
+
+.react-datepicker-wrapper {
+  display: block !important;
+}
+
+.listing-ml-40 {
+  margin-left: 40px;
+  margin-top: -10px;
+}
+
+.remove-accordian-style {
+  width: 0%;
+  border: 0px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+.custom_checkbox {
+  opacity: 0;
+}
+
+.hideOverflow {
+  overflow: hidden !important;
+}

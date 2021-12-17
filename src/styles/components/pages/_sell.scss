@@ -1,0 +1,124 @@
+.sell {
+  .page__content {
+    display: flex;
+    gap: 4rem;
+    border-radius: 4px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .product {
+      flex: 1;
+      background-color: $color-white;
+      padding: 2rem;
+      border-radius: 4px;
+
+      .form__input {
+        flex-basis: 100% !important;
+      }
+    }
+
+    .customer {
+      flex: 2;
+      background-color: $color-white;
+      padding: 2rem;
+      border-radius: 4px;
+
+      .customer-del-btn {
+        cursor: pointer;
+      }
+      .autocomplete-margin {
+        margin-bottom: 7rem;
+      }
+    }
+  }
+
+  .page__buttons {
+    @include xs {
+      flex-direction: column;
+    }
+  }
+
+  .dead-sale-button {
+    background: #ff4d4f !important;
+    border-color: #ff4d4f !important;
+    color: $color-white;
+  }
+}
+
+.mops-modal-inner-margin {
+  margin-bottom: 0.5rem;
+}
+.web-order-modal {
+  top: 1rem;
+  .modal_content {
+    max-height: 500px !important;
+    overflow-y: scroll;
+  }
+}
+
+.align-center {
+  align-items: center;
+}
+.alert-snackbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.web_orders {
+  .form__row {
+    justify-content: space-between;
+  }
+
+  .table {
+    margin-top: 8rem;
+  }
+
+  .align-center {
+    @include mobile {
+      align-items: normal;
+    }
+  }
+
+  .btn-align-right {
+    @include mobile {
+      align-self: center;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  .button {
+    @include mobile {
+      align-self: center;
+    }
+  }
+}
+
+.modal_heading_invoice {
+  width: 100%;
+}
+.green-button {
+  background-color: green !important;
+  color: white !important;
+}
+
+.modal_date_picker {
+  height: 200px;
+}
+
+._gap {
+  gap: 0px !important;
+}

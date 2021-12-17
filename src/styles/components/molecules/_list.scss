@@ -1,0 +1,26 @@
+.list {
+  padding: 2.7rem 3.8rem;
+  background-color: $color-white;
+  flex: 1;
+
+  .heading {
+    margin-bottom: 2.2rem;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  &__item {
+    font-size: $font-size-normal;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    span {
+      font-weight: lighter;
+      flex: 1;
+    }
+  }
+}

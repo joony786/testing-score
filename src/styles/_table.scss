@@ -1,0 +1,79 @@
+.table-no-search-data {
+  text-align: center;
+  /* top: 5rem; */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: rgb(100, 112, 125);
+}
+
+.sell-nested-products-table {
+  .delete-action-btn {
+    cursor: pointer;
+    margin-left: 1.5rem;
+  }
+  .sell-products-editable-width {
+    max-width: 80%;
+  }
+}
+
+.sell-history-nested-invoices-table,
+.products-lookup-view-nested-table,
+.actions-history-view-nested-table {
+  .table-row-action-btn {
+    cursor: pointer;
+    margin-left: 1.5rem;
+  }
+  .eye {
+    color: green;
+  }
+
+  .store-count-heading {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #0d62ff;
+    color: #fff;
+  }
+  .table__row {
+    margin-left: 1rem;
+    width: 1200px;
+  }
+}
+
+.products-view-nested-table,
+.products-discounts-view-nested-table {
+  .table-row-variants-link {
+    cursor: pointer;
+    color: #1890ff;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.table__actionHistory-main {
+  overflow: auto;
+
+  table {
+    width: 1200px !important;
+  }
+}
+
+.table__noData {
+  margin-bottom: 32px;
+  font-size: 12px;
+  font-family: Gilroy-SemiBold;
+  letter-spacing: 0.9px;
+  line-height: 14px;
+  font-style: normal;
+  text-transform: uppercase;
+  color: rgb(100, 112, 125);
+}
+
+.table__main-salesSummary {
+  text-align: center;
+  width: 500px;
+  height: 500px;
+  margin: 66px auto 0px;
+}

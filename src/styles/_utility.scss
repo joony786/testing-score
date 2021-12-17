@@ -1,0 +1,45 @@
+.u_flex_start {
+  align-items: flex-start !important;
+
+  @include mobile {
+    align-items: normal !important;
+  }
+}
+
+.u_space_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.u_align_center {
+  text-align: center !important;
+}
+
+.u_block {
+  display: block !important;
+}
+
+.u_width_100 {
+  width: 100% !important;
+}
+
+.u_width_50 {
+  width: 50% !important;
+
+  @include mobile {
+    width: 100% !important;
+  }
+}
+
+.u-no-scroll {
+  overflow: hidden;
+}
+
+.u-text-normal {
+  font-size: $font-size-normal;
+}
+
+.u-mb-20 {
+  margin-bottom: 2rem;
+}

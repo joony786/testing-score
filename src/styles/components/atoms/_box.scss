@@ -1,0 +1,19 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  padding: 2.1rem;
+  background-color: $color-white;
+  border-radius: 4px;
+  flex: 1 1;
+
+  .text {
+    font-size: $font-size-normal;
+  }
+
+  .number {
+    font-size: $font-size-big;
+    font-weight: bold;
+  }
+}

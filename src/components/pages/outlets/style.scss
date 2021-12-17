@@ -1,0 +1,51 @@
+// @import "../../../styles/abstract/variables";
+// @import "../../../styles/abstract/mixins";
+
+// .outlet {
+//   &__select {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-template-rows: 1fr;
+//     column-gap: 2rem;
+//     row-gap: 2rem;
+//     cursor: pointer;
+
+//     @include mobile {
+//       grid-template-columns: 1fr;
+//       margin-bottom: 6rem;
+//     }
+//   }
+
+//   &__link {
+//     padding: 2rem 5rem;
+//     background-color: $color-white;
+//     color: $color-black;
+//     display: inline-block;
+//     transition: all 0.3s;
+//     border: 1px solid #454f5b;
+//     text-transform: capitalize;
+
+//     &:hover {
+//       color: $color-white;
+//       background-color: $color-blue;
+//       border-color: $color-blue;
+//       transform: scale(0.9);
+//     }
+
+//     @include mobile {
+//       &:not(:last-child) {
+//         margin-bottom: 2rem;
+//       }
+//     }
+//   }
+
+//   &__active {
+//     color: $color-white;
+//     background-color: $color-blue;
+//     border-color: $color-blue;
+//   }
+// }
+
+// .loading-container {
+//   text-align: center;
+// }

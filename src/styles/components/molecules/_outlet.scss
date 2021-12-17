@@ -1,0 +1,27 @@
+.select_outlet {
+  display: flex;
+  gap: 3rem;
+
+  .outlet {
+    font-size: $font-size-big;
+    background-color: $color-white;
+    color: $color-black;
+    padding: 4rem 6rem;
+  }
+}
+.currency-flag-img {
+  width: 2.5rem;
+  margin-right: 1rem;
+}
+.currency_li {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: left;
+    list-style: none;
+    cursor: pointer;
+    color: #121213;
+    padding: 14px 10px 14px 10px;
+    &:hover{
+    background-color: #F1F2F4;
+    }
+}

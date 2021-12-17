@@ -1,0 +1,260 @@
+.products-variants-modal .modal_content {
+  height: 400px;
+  overflow: auto;
+}
+
+.scan-check-button {
+  width: max-content;
+}
+
+.stock-order-products-container {
+  margin-top: 3rem;
+}
+
+.label-stock-count {
+  float: right !important;
+  font-size: 1.5rem;
+}
+
+.order-products-title {
+  justify-content: space-between !important;
+}
+
+.add-po {
+  margin-top: 10rem;
+}
+
+.order-products {
+  .MsnGR {
+    width: 50%;
+  }
+
+  .products-search-list-item {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.stock-autocomplete-popup {
+  height: 200px;
+  overflow: auto;
+  font-size: 13px;
+  cursor: pointer;
+
+  ul {
+    list-style-type: none;
+  }
+}
+.products-search-list-item {
+  margin-bottom: 1.5rem;
+}
+.stock-autocomplete-popup .search {
+  padding: 15px !important;
+  div ul {
+    --space-x-reverse: 0;
+    margin-right: calc(0.5rem * var(--space-x-reverse)) !important;
+    margin-left: calc(0.5rem * calc(1 - var(--space-x-reverse))) !important;
+  }
+}
+
+.stock-autocomplete-popup::-webkit-scrollbar-thumb {
+  //background-image: linear-gradient(180deg, #D0368A 0%, #708AD4 99%);
+  background-color: gray;
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  border-radius: 8px;
+}
+
+.stock-autocomplete-popup::-webkit-scrollbar {
+  width: 12px;
+}
+
+.stock-autocomplete-popup::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+}
+
+.ml-50 {
+  margin-left: 50%;
+}
+
+.header_with_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+// receive_Purchase_Order_styles
+.po_heading {
+  display: flex;
+  padding: 0 0 3rem;
+  border-bottom: 1px solid #f7f7f7;
+  // width: 34%;
+  justify-content: space-between;
+  // align-items: center;
+
+  h1 {
+    font-size: 2.1rem;
+    font-weight: 600;
+  }
+}
+.subHeading {
+  padding: 10px;
+  background-color: #ffffff;
+  //padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+
+  h4 {
+    line-height: 1.7;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}
+.mainContent_heading {
+  padding: 10px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 0.75rem;
+  span:first-child {
+    grid-column: span 2 / span 2;
+  }
+  span {
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+  }
+  // span:last-child {
+  //   margin-bottom: 15px;
+  // }
+  span p {
+    // color: gray;
+    margin-left: 10px;
+  }
+}
+
+.mt {
+  //margin-bottom: 0!important;
+  margin-bottom: 5rem;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  label {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+}
+.purchase__order--status {
+  span:first-child {
+    grid-column: span 1 / span 1;
+  }
+  span:nth-child(3) {
+    grid-column: span 2 / span 2;
+    strong {
+      color: #1890ff;
+      margin-left: 10px;
+    }
+  }
+}
+.table__container {
+  margin-top: 55px;
+  position: relative;
+}
+.Table__footer {
+  position: absolute;
+  bottom: 0;
+}
+.bottom__btn {
+  display: flex;
+  justify-content: space-around;
+  Button:first-child {
+    margin-right: 1rem;
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    span {
+      font-weight: 400;
+      line-height: 1.7;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.submit__order {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+
+  Button:first-child {
+    margin-right: 1rem;
+  }
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+.mr-50 {
+  margin-right: 50px;
+}
+
+.quantity {
+  span:first-child {
+    padding-right: 1rem;
+  }
+}
+.mr-50 {
+  margin-right: 50px;
+}
+
+.modal-content-custom {
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  overflow: hidden;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.mb-5 {
+  margin-bottom: 5px;
+}
+.lh-35 {
+  line-height: 35px;
+}
+
+.eye {
+  cursor: pointer;
+}
+
+.w-150 {
+  width: 150px;
+}
+
+.page_view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // margin-bottom: 4rem;
+}
+
+.info {
+  display: flex;
+  // align-items: center;
+  margin-top: 1rem;
+  &__text {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+  }
+}

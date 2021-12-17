@@ -1,0 +1,50 @@
+.page__date_picker {
+  display: inline-block;
+
+  @include mobile {
+    display: block;
+  }
+
+  .date_range_picker {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: normal;
+    }
+  }
+
+  svg {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .calendar {
+    width: 15rem;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .custom__filter {
+    display: flex;
+    align-items: center;
+    grid-gap: 2rem;
+    gap: 2rem;
+    width: 15rem;
+    margin-top: 5px;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+  .picker {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 1rem;
+  }
+}

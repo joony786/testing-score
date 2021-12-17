@@ -1,0 +1,186 @@
+import React, { useState, useEffect, useReducer } from "react";
+import { Input } from "@teamfabric/copilot-ui";
+import { useHistory } from "react-router-dom";
+
+// components
+import ButtonBack from "../../../atoms/button_back";
+import * as CouriersApiUtil from '../../../../utils/api/couriers-api-utils';
+import * as Helpers from "../../../../utils/helpers/scripts";
+import CustomButtonWithIcon from "../../../atoms/button_with_icon";
+import SwitchOutlet from "../../../atoms/switch_outlet";
+
+
+
+function AddCourier() {
+
+  const initialFormValues = {
+    courierName: "",
+    courierCode: "",
+  }
+  const initialFormErrorsValues = {
+    courierNameError: false,
+    courierCodeError: false,
+  }
+  const formReducer = (state, event) => {
+    return { ...state, ...event };
+  }
+  const formErrorsReducer = (state, event) => {
+    return { ...state, ...event };
+  }
+
+  const [formData, setFormData] = useReducer(formReducer, initialFormValues);
+  const [formErrorsData, setFormErrorsData] = useReducer(formErrorsReducer, initialFormErrorsValues);
+  const { courierName, courierCode, } = formData;
+  const { courierNameError, courierCodeError, } = formErrorsData;
+  const history = useHistory();
+  const [buttonDisabled, setButtonDisabled] = useState(false);
+
+
+  let mounted = true;
+
+
+  useEffect(() => {
+    return () => {
+      mounted = false;
+    }
+  }, []);
+
+
+  const onFormSubmit = async (event) => {
+    event.preventDefault();  //imp
+    let formValidationsPassedCheck = true;
+
+    if (!courierName || !courierCode) {
+      formValidationsPassedCheck = false;
+      if (!courierName) {
+        setFormErrorsData({
+          courierNameError: true,
+        });
+      }
+      if (!courierCode) {
+        setFormErrorsData({
+          courierCodeError: true,
+        });
+      }
+    }
+
+    if (formValidationsPassedCheck) {
+
+      if (buttonDisabled === false) {
+        setButtonDisabled(true);
+      }
+
+      document.getElementById('app-loader-container').style.display = "block";
+      const courierAddResponse = await CouriersApiUtil.addCourier(
+        courierName,
+        courierCode
+      );
+      console.log("courierAddResponse:", courierAddResponse);
+      if (courierAddResponse.hasError) {
+        console.log(
+          "Cant add a new Courier -> ",
+          courierAddResponse.errorMessage
+        );
+        setButtonDisabled(false);
+        document.getElementById('app-loader-container').style.display = "none";
+        showAlertUi(true, courierAddResponse.errorMessage);  //imp
+
+      } else {
+        if (mounted) {     //imp if unmounted
+          document.getElementById('app-loader-container').style.display = "none";
+          setTimeout(() => {
+            history.push({
+              pathname: "/couriers",
+            });
+          }, 500);
+        }
+      }
+
+    }
+
+  };
+
+
+  const showAlertUi = (show, errorText) => {
+    Helpers.showAppAlertUiContent(show, errorText);
+  }
+
+
+  const handleFormChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ [name]: value });
+
+    let inputErrorKey = `${name}Error`;  //imp
+    setFormErrorsData({
+      [inputErrorKey]: false,
+    });
+
+  }
+
+
+
+
+  return (
+
+    <div className="page">
+      <div className="page__back_btn"></div>
+
+      <div className="page__top">
+        <SwitchOutlet />
+        <ButtonBack text="Back to Couriers" link="/couriers" />
+      </div>
+
+      <div className="page__body">
+        <section className="page__header">
+          <h1 className="heading heading--primary">Add Courier</h1>
+
+          <CustomButtonWithIcon
+            size="small"
+            isPrimary={true}
+            text="Add"
+            disabled={buttonDisabled}
+            onClick={onFormSubmit}
+          />
+        </section>
+
+        <section className="page__content">
+          <form className="form">
+            <div className="form__row">
+              <div className="form__input">
+                <Input
+                  className="primary required"
+                  inputProps={{
+                    disabled: false,
+                    onChange: handleFormChange,
+                    name: "courierName",
+                    value: courierName,
+                  }}
+                  label="*Courier Name"
+                  errorMessage="Field Is Required"
+                  error={courierNameError}
+                />
+              </div>
+              <div className="form__input">
+                <Input
+                  className="primary required"
+                  inputProps={{
+                    disabled: false,
+                    onChange: handleFormChange,
+                    name: "courierCode",
+                    value: courierCode,
+                  }}
+                  label="*Courier Code"
+                  errorMessage="Field Is Required"
+                  error={courierCodeError}
+                />
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
+  );
+}
+
+export default AddCourier;

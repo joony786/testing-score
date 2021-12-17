@@ -1,0 +1,51 @@
+.edit_outlet {
+  .section {
+    margin-bottom: 4rem;
+
+    &.hooks .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .heading--sub {
+      margin-top: 1rem;
+
+      .pill {
+        margin-left: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: $color-blue;
+        color: $color-white;
+      }
+    }
+
+    .body {
+      display: flex;
+      gap: 6rem;
+      align-items: end;
+      flex: 1;
+      margin-top: 2rem;
+
+      @include mobile {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+
+    .input {
+      display: flex;
+      gap: 3rem;
+      align-items: end;
+      flex: 1;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+}
+.margin-top {
+  margin-top: 40px;
+}

@@ -1,0 +1,21 @@
+.customer_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid $color-grey;
+  border-bottom: 1px solid $color-grey;
+
+  &__info {
+    flex: 1;
+
+    .email {
+      margin-right: 1rem;
+    }
+
+    .phone {
+      margin-left: 1rem;
+    }
+  }
+}

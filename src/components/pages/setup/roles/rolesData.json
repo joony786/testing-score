@@ -1,0 +1,215 @@
+[
+  {
+    "row": "1",
+    "data": [
+      {
+        "name": "Templates",
+        "permissions": [
+          {
+            "name": "Read",
+            "value": "read_templates"
+          },
+          {
+            "name": "Write",
+            "value": "write_templates"
+          },
+          {
+            "name": "Update",
+            "value": "update_templates"
+          },
+          {
+            "name": "Delete",
+            "value": "delete_templates"
+          }
+        ]
+      },
+      {
+        "name": "Suppliers",
+        "permissions": [
+          {
+            "name": "Read",
+            "value": "read_suppliers"
+          },
+          {
+            "name": "Write",
+            "value": "write_suppliers"
+          },
+          {
+            "name": "Update",
+            "value": "update_suppliers"
+          },
+          {
+            "name": "Delete",
+            "value": "delete_suppliers"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "row": "2",
+    "data": [
+      {
+        "name": "Customers",
+        "permissions": [
+          {
+            "name": "Read",
+            "value": "read_customers"
+          },
+          {
+            "name": "Write",
+            "value": "write_customers"
+          },
+          {
+            "name": "Update",
+            "value": "update_customers"
+          },
+          {
+            "name": "Delete",
+            "value": "delete_customers"
+          }
+        ]
+      },
+      {
+        "name": "Registers",
+        "permissions": [
+          {
+            "name": "Read",
+            "value": "read_invoices"
+          },
+          {
+            "name": "Write",
+            "value": "write_invoices"
+          },
+          {
+            "name": "Update",
+            "value": "update_invoices"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "row": "3",
+    "data": [
+      {
+        "name": "Stores",
+        "permissions": [
+          {
+            "name": "Read",
+            "value": "read_stores"
+          },
+          {
+            "name": "Write",
+            "value": "write_stores"
+          },
+          {
+            "name": "Update",
+            "value": "update_stores"
+          }
+        ]
+      },
+      {
+        "name": "Brand",
+        "permissions": [
+          {
+            "name": "Read",
+            "value": "read_brand"
+          },
+          {
+            "name": "Write",
+            "value": "write_brand"
+          },
+          {
+            "name": "Update",
+            "value": "update_brand"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "row": "4",
+    "data": [
+      {
+        "name": "Users",
+        "permissions": [
+          {
+            "name": "Read",
+            "value": "read_users"
+          },
+          {
+            "name": "Write",
+            "value": "write_users"
+          },
+          {
+            "name": "Update",
+            "value": "update_users"
+          }
+        ]
+      },
+      {
+        "name": "Stock Request",
+        "permissions": [
+          {
+            "name": "Read",
+            "value": "read_transfers"
+          },
+          {
+            "name": "Write",
+            "value": "write_transfers"
+          },
+          {
+            "name": "Update",
+            "value": "update_transfers"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "row": "5",
+    "data": [
+      {
+        "name": "Stock Adjustments",
+        "permissions": [
+          {
+            "name": "Read",
+            "value": "read_stock_adjustment"
+          },
+          {
+            "name": "Write",
+            "value": "write_stock_adjustment"
+          },
+          {
+            "name": "Update",
+            "value": "update_stock_adjustment"
+          }
+        ]
+      },
+      {
+        "name": "Categories",
+        "permissions": [
+          {
+            "name": "Read",
+            "value": "read_categories"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "row": "6",
+    "data": [
+      {
+        "name": "Products",
+        "permissions": [
+          {
+            "name": "Read",
+            "value": "read_products"
+          }
+        ]
+      }
+    ]
+  }
+]

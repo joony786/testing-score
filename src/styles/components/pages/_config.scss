@@ -1,0 +1,92 @@
+.config {
+  margin-top: 3rem;
+
+  .section {
+    padding: 3.5rem 3rem;
+    margin-bottom: 3rem;
+    background-color: $color-white;
+
+    &__heading {
+      margin-bottom: 3rem;
+    }
+
+    .heading__secondary {
+      margin-bottom: 3rem;
+    }
+
+    .row {
+      margin-bottom: 3rem;
+    }
+
+    .block {
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      // border-bottom: 1px solid $color-grey;
+    }
+
+    .parent_item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .form {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &:last-child {
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      margin-left: 2rem;
+    }
+
+    li {
+      margin-bottom: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  li,
+  label span {
+    font-size: $font-size-small;
+  }
+}
+
+// barcode
+.barcode_form {
+  .form {
+    display: block;
+
+    &.section {
+      padding: 0;
+    }
+  }
+
+  .form__row {
+    margin-bottom: 2rem;
+  }
+
+  .parent_item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+  }
+
+  .heading__secondary {
+    margin-bottom: 3rem;
+  }
+}
